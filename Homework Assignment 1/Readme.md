@@ -1,8 +1,8 @@
 Choose a software framework. A few candidates:
-•Marvin “http://marvin.is/”
-•Tensorflow “https://www.tensorflow.org/”
-•Caffe “http://caffe.berkeleyvision.org/”
-•Pylearn2 “http://deeplearning.net/software/pylearn2/”
+• Marvin “http://marvin.is/”
+• Tensorflow “https://www.tensorflow.org/”
+• Caffe “http://caffe.berkeleyvision.org/”
+• Pylearn2 “http://deeplearning.net/software/pylearn2/”
 Download the benchmark dataset MNIST from “http://yann.lecun.com/exdb/mnist/”.
 
 Implement multiclass logistic regression and try it on MNIST. Comments: MNIST is a stan-
