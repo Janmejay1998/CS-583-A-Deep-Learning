@@ -15,7 +15,7 @@ hyperparameters (remember to create and use validation dataset!).
 Check the tutorials for some of the parameters (e.g., “https://machinelearningmastery.com/how-
 to-develop-a-convolutional-neural-network-from-scratch-for-mnist-handwritten-digit-classification/”).
 
-•Build a three-layer feedforward network: [6 points]
+* Build a three-layer feedforward network: [6 points]
 
 x →h1 →h2 →p(y|h2). (1)
 
@@ -25,14 +25,13 @@ on the batches and also plot the classification error on the validation data.
 •Repeat the above experiment, but train the network with the following regularizations
 and compare with the results in the previous experiment:
 
-L2 regularization [4 points]
+* L2 regularization [4 points]
 
 Comments: no need to implement them on your own; the software framework typically
 provides implementations for L2 regularization and dropout.
 
-1Each epoch is a pass over the training data. Suppose you use batches of size b, and the training data set
+1 Each epoch is a pass over the training data. Suppose you use batches of size b, and the training data set
 has n points, then an epoch consists of n/b batches. Note that you can divide the data set into batches and
 then round-robin over the batches. You can also randomly sample, say 64 points for each batch. Either way
 is OK, and typically there is no performance difference between them. When these batches are randomly
-sampled, it is possible that some points are not in any of them, but we still call these batches a pass over
-the data. Acknowledgement: Thanks Princeton COS 495 for this homework.
+sampled, it is possible that some points are not in any of them, but we still call these batches a pass over the data. Acknowledgement: Thanks Princeton COS 495 for this homework.
