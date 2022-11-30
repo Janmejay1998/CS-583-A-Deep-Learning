@@ -1,0 +1,674 @@
+WEBVTT
+
+1
+00:00:02.340 --> 00:00:05.740
+Janmejay Mohanty: Hello, my name is,
+
+2
+00:00:05.870 --> 00:00:17.320
+Janmejay Mohanty: and uh, today I am gonna present a research paper on Safe and Natural sub game solving for imperfection information gains
+
+3
+00:00:18.430 --> 00:00:21.680
+Janmejay Mohanty: for for deep learning course.
+
+4
+00:00:23.750 --> 00:00:25.669
+Janmejay Mohanty: So hmm.
+
+5
+00:00:26.750 --> 00:00:31.010
+Janmejay Mohanty: The summary summary of this topic is that,
+
+6
+00:00:31.320 --> 00:00:32.400
+Janmejay Mohanty: unlike
+
+7
+00:00:32.670 --> 00:00:42.659
+Janmejay Mohanty: of uh and unlike perfect information games, the perfect ones cannot be solved by. I simply didn't compose that game into several sub games
+
+8
+00:00:42.690 --> 00:00:44.910
+Janmejay Mohanty: which I saw independently.
+
+9
+00:00:45.300 --> 00:00:55.079
+Janmejay Mohanty: Therefore we use a more intense computational matter of equilibrium search which takes all the decision
+
+10
+00:00:55.590 --> 00:00:59.289
+Janmejay Mohanty: of strategy of all game.
+
+11
+00:01:00.630 --> 00:01:16.359
+Janmejay Mohanty: Also, it's not possible for an in perfect information game to solve by method of the composition it's possible to get an approximately or or improving the existing solution by solving that these joining subcains.
+
+12
+00:01:16.530 --> 00:01:29.169
+Janmejay Mohanty: This method is commonly known as sub game solving. We introduce sub game solving methods that can be both prior techniques and theory theory as well as practical.
+
+13
+00:01:29.820 --> 00:01:33.419
+Janmejay Mohanty: So sub game solving is a major part of
+
+14
+00:01:33.460 --> 00:01:35.479
+the first
+
+15
+00:01:42.310 --> 00:01:44.509
+Janmejay Mohanty: Texas poker,
+
+16
+00:01:46.490 --> 00:01:47.809
+Janmejay Mohanty: introduction
+
+17
+00:01:48.720 --> 00:01:53.059
+Janmejay Mohanty: and perfect information games, models uh
+
+18
+00:01:53.210 --> 00:02:03.920
+Janmejay Mohanty: strategic settings that may have hidden information. They have a countless application, including negotiation, cyber security, and physical security,
+
+19
+00:02:03.930 --> 00:02:13.690
+Janmejay Mohanty: and this type of games. The goal is to find a Nash equilibrium, which is a profile of strategies, one for each player
+
+20
+00:02:13.920 --> 00:02:23.309
+Janmejay Mohanty: such that no player can improve by one-sided deviating to a different strategy.
+
+21
+00:02:24.160 --> 00:02:36.389
+Janmejay Mohanty: Sub Game solving is a standard method for perfection, information, games for example, chess and checkers, in which a part of game is solved in an ice low isolation state.
+
+22
+00:02:36.400 --> 00:02:51.239
+Janmejay Mohanty: It can be achieved in perfect information games, as the exact state of game is not which allows remaining sub game to be solved independently from the rest of the game. For example,
+
+23
+00:02:51.380 --> 00:03:10.180
+Janmejay Mohanty: we can discuss about chess game in chess game to determine the optimal response to the Queen. Gambit requires no knowledge of the optimal response to the Csc. Feeling and defense. This the composition was the major
+
+24
+00:03:10.190 --> 00:03:17.610
+Janmejay Mohanty: component for Ai being able to defeat of humans in chess and go.
+
+25
+00:03:19.320 --> 00:03:21.250
+Janmejay Mohanty: Oh, in this
+
+26
+00:03:21.640 --> 00:03:40.690
+Janmejay Mohanty: uh topic we are using Nash equilibrium approach. The Nash equilibrium is a decision making theorem within game theory that states, if they can achieve their design, outcome by not debating from their initial strategy in the Nash equilibrium. Each clear strategy is optimal,
+
+27
+00:03:45.260 --> 00:03:46.620
+Janmejay Mohanty: for example,
+
+28
+00:03:46.780 --> 00:03:57.610
+Janmejay Mohanty: so chairs is a zero sum game. So all Nash equilibria will lead to the same of three outcomes. White wins, black wins and drop.
+
+29
+00:04:06.690 --> 00:04:08.450
+Janmejay Mohanty: So the first thing there.
+
+30
+00:04:08.530 --> 00:04:21.619
+Janmejay Mohanty: The example of pointers here see, represent a chance. Node S. Is a player, two P. Two, some game dotted line between the two. P. Two nodes means that the P. Two can not,
+
+31
+00:04:21.920 --> 00:04:24.920
+Janmejay Mohanty: can't distinguish between them.
+
+32
+00:04:36.400 --> 00:04:37.570
+Janmejay Mohanty: So
+
+33
+00:04:37.840 --> 00:04:40.750
+Janmejay Mohanty: if we consider the first figure
+
+34
+00:04:49.310 --> 00:04:51.600
+Janmejay Mohanty: going to
+
+35
+00:04:51.840 --> 00:04:52.750
+Janmejay Mohanty: yeah,
+
+36
+00:04:52.790 --> 00:05:04.030
+Janmejay Mohanty: the call does basic concept. The coin toss. Is it played by two players? P. One and two. A flip coin has only two possible outcomes, either head or tails,
+
+37
+00:05:04.880 --> 00:05:06.780
+Janmejay Mohanty: with equal probability.
+
+38
+00:05:07.280 --> 00:05:10.260
+Janmejay Mohanty: So to understand this problem.
+
+39
+00:05:10.370 --> 00:05:12.880
+Janmejay Mohanty: So we go by step by step.
+
+40
+00:05:13.010 --> 00:05:14.220
+Janmejay Mohanty: So
+
+41
+00:05:15.640 --> 00:05:21.500
+Janmejay Mohanty: a coin is first fled, and lands either its head or tails,
+
+42
+00:05:22.500 --> 00:05:25.910
+Janmejay Mohanty: and you can see the two outcomes,
+
+43
+00:05:26.680 --> 00:05:27.600
+Janmejay Mohanty: and
+
+44
+00:05:27.670 --> 00:05:37.020
+Janmejay Mohanty: only the thing is only P. One is the outcome. P. One can then choose between actions, sales, and play.
+
+45
+00:05:37.650 --> 00:05:45.349
+Janmejay Mohanty: The sales action leads to the A sub game whose details are not important. So we does remove that point.
+
+46
+00:05:45.540 --> 00:05:46.560
+Janmejay Mohanty: And
+
+47
+00:05:48.240 --> 00:05:49.330
+Janmejay Mohanty: if
+
+48
+00:05:49.620 --> 00:05:52.199
+Janmejay Mohanty: the sub-
+
+49
+00:05:52.880 --> 00:05:54.420
+Janmejay Mohanty: this
+
+50
+00:05:54.960 --> 00:06:00.910
+Janmejay Mohanty: uh the sale, action, Okay. But the expected value of P. One
+
+51
+00:06:01.420 --> 00:06:05.210
+Janmejay Mohanty: of choosing the selection will be important.
+
+52
+00:06:17.350 --> 00:06:19.500
+Janmejay Mohanty: Fifty dollars
+
+53
+00:06:21.890 --> 00:06:32.189
+Janmejay Mohanty: for choose a for choosing sale. On the other hand, if the coin land scales. It is considered under key, and P. One receives an expected value of minus fifty,
+
+54
+00:06:33.670 --> 00:06:34.690
+Janmejay Mohanty: and
+
+55
+00:06:35.630 --> 00:06:37.290
+Janmejay Mohanty: if the people
+
+56
+00:06:37.720 --> 00:06:43.320
+Janmejay Mohanty: chooses to play, then P. Two has the opportunity to guess how the coin
+
+57
+00:06:44.290 --> 00:06:49.209
+Janmejay Mohanty: lend landed. If P. Two guess is correctly P. One rewards
+
+58
+00:06:49.650 --> 00:07:00.270
+Janmejay Mohanty: receives a reward of minus one dollar, the figure shows reward only for p. One we choose then, but will be relevant to later sections.
+
+59
+00:07:06.790 --> 00:07:07.930
+Janmejay Mohanty: S.
+
+60
+00:07:09.540 --> 00:07:12.629
+Janmejay Mohanty: That occurs after P. One chooses
+
+61
+00:07:12.650 --> 00:07:13.640
+Janmejay Mohanty: play
+
+62
+00:07:13.780 --> 00:07:17.370
+Janmejay Mohanty: configure that shown in a figure a
+
+63
+00:07:18.240 --> 00:07:28.299
+Janmejay Mohanty: where P. Two to always guess heads t one would receive point fifty cents for choosing sale, and when the coin lands,
+
+64
+00:07:28.700 --> 00:07:40.269
+Janmejay Mohanty: head lands, heads and dollar one for using play when it lands This this would result in an average of point. Seven point seventy, five cents for
+
+65
+00:07:45.140 --> 00:07:51.020
+Janmejay Mohanty: always guesses. Yes, tails even go to receive dollar one for choosing play
+
+66
+00:07:51.380 --> 00:08:05.760
+Janmejay Mohanty: when it lands heads and minus fifty cents for choosing sale when it lands sales. This will result in an average reward of point, a a result of twenty, five cents for player, one
+
+67
+00:08:05.770 --> 00:08:16.499
+Janmejay Mohanty: Our player, two would do even better by guessing heads, with twenty-five percent priority, and ten entails with seventy five percent providing. In this case
+
+68
+00:08:16.530 --> 00:08:17.690
+Janmejay Mohanty: even
+
+69
+00:08:18.250 --> 00:08:27.920
+Janmejay Mohanty: the player one could only receive fifty cents on an average by choosing play when the coin lands heads the same value for choosing sale.
+
+70
+00:08:29.930 --> 00:08:41.820
+Janmejay Mohanty: Now, if we go to the next part, some notation backgrounds in an imperfect information, extensive form game, there is a finite set of layers.
+
+71
+00:08:41.880 --> 00:08:43.010
+Janmejay Mohanty: There's
+
+72
+00:08:43.039 --> 00:08:44.319
+Janmejay Mohanty: uh B.
+
+73
+00:08:44.470 --> 00:08:56.779
+Janmejay Mohanty: H. Is a capital. H. Is a set of all possible to history, is not in the game tree represented as a sequence of actions, and includes the empty history.
+
+74
+00:08:57.480 --> 00:09:16.469
+Janmejay Mohanty: A bracket edge is the actions uh level in a history, and P. H. Record Edge belongs to Ftelp, uh Union, c. Is the player who acts as at the history where C. Denotes the chance history as dash
+
+75
+00:09:16.550 --> 00:09:34.980
+Janmejay Mohanty: it's one I's just at least after an action is taken in small edge, is a child of small edge, represented by a small. It's a dot or a small edge in small, a equal to small edge dash, while small edge is the parent or smallest dash.
+
+76
+00:09:36.080 --> 00:09:41.450
+Janmejay Mohanty: Oh, what is masical room again? Here we can see the equation.
+
+77
+00:09:41.660 --> 00:09:47.019
+Janmejay Mohanty: We try to understand, and is a strategic profile all for
+
+78
+00:09:47.680 --> 00:09:50.250
+Janmejay Mohanty: since uh of
+
+79
+00:09:50.480 --> 00:09:55.289
+Janmejay Mohanty: row star such that for for all I
+
+80
+00:09:55.440 --> 00:10:10.700
+Janmejay Mohanty: ui is a belong ui bracket roo, I star comma rho minus I star equal to Max Rose. Dash belongs to Sigma till I
+
+81
+00:10:11.050 --> 00:10:14.860
+Janmejay Mohanty: summation of I. New ui
+
+82
+00:10:15.130 --> 00:10:16.350
+Janmejay Mohanty: bracket
+
+83
+00:10:16.420 --> 00:10:27.520
+Janmejay Mohanty: Rose Star, I minus the comma roast or minus sign for two player zero. Some games, all Nash equilibrium gave identical expected values for a player.
+
+84
+00:10:31.680 --> 00:10:32.660
+Janmejay Mohanty: Wait a second.
+
+85
+00:10:37.630 --> 00:10:47.620
+Janmejay Mohanty: Yeah. Right prior. Now we take the look on the prior approach to some game solving in perfect confirmation games,
+
+86
+00:10:47.850 --> 00:11:03.789
+Janmejay Mohanty: as the figure states uh is from the crunk strategy we refer to in the game of going to the cell. Election leads to a sub game that is not dis displayed. Priorities are shown for all the action, as you can see, since both
+
+87
+00:11:03.800 --> 00:11:15.449
+Janmejay Mohanty: the two nodes share an information set, the priorities over actions for each node must be identical. The counterfeitual best response value of each P. One
+
+88
+00:11:15.960 --> 00:11:18.260
+Janmejay Mohanty: action is also shown,
+
+89
+00:11:18.720 --> 00:11:21.250
+Janmejay Mohanty: so we can discuss how it works
+
+90
+00:11:29.340 --> 00:11:32.020
+Janmejay Mohanty: to shown in figure. Two
+
+91
+00:11:32.580 --> 00:11:50.690
+Janmejay Mohanty: has already computed four point to us, in which P. One chooses the three fourth of the time with heads and half of the time with tails and layer, two chooses heads half of the time tails one fourth of the time, and for fit one fourth of
+
+92
+00:11:50.940 --> 00:11:54.780
+Janmejay Mohanty: the time after player one chooses play, play.
+
+93
+00:11:54.830 --> 00:12:10.549
+Janmejay Mohanty: The details of the trunk strategy in the cell cell sub game are not relevant in this section, but expected value for choosing the sale. Action is relevant. We assume that if clear one choose the sale election and
+
+94
+00:12:10.780 --> 00:12:30.529
+Janmejay Mohanty: played optimally. Uh, thereafter. Then we she she would receive an expected pay of four point five. If the going is heads and minus zero point, five is the coin scales we will attempt to improve place to ready in the sub game as that follows. P. One chooses
+
+95
+00:12:30.610 --> 00:12:32.090
+Janmejay Mohanty: everyone chooses
+
+96
+00:12:32.120 --> 00:12:33.670
+Janmejay Mohanty: choosing.
+
+97
+00:12:35.810 --> 00:12:38.979
+Janmejay Mohanty: Here is the unsafe sub game solving
+
+98
+00:12:39.630 --> 00:12:48.219
+Janmejay Mohanty: Uh: this video shows that the augmented sub game solved by unsafe subgame solving to determine that P. Two square Tg:
+
+99
+00:12:54.180 --> 00:13:11.930
+Janmejay Mohanty: Okay, So here the unsafe subgame, solving, lax, theoretical solution quality the ent is, and there are many situation where it performs extremely poorly, because it makes strong assumptions about the one strategy outside, as
+
+100
+00:13:11.940 --> 00:13:30.449
+Janmejay Mohanty: that may not be true. Indeed, if it were applied to the trunk strategy of Guantos, it would produce a strategy in which P. Two always chooses heads which P. One could exploit several severely by only choosing play with,
+
+101
+00:13:30.460 --> 00:13:43.390
+Janmejay Mohanty: despite the lack of theoretical guarantees and potential bad performance. Unsafe Sub game. Solving is simple, and sometimes produce low, exploitable strategies, as we show later,
+
+102
+00:13:48.350 --> 00:14:03.520
+Janmejay Mohanty: sub-game re-solving approach. You can see here, this video shows that dogman dates sub game used by resolving to determine a P. To strategy in the display sub game of coin to us.
+
+103
+00:14:06.310 --> 00:14:15.949
+Janmejay Mohanty: Clearly, here we can see clearly your own cannot do worse than and always speaking action a dash t
+
+104
+00:14:16.030 --> 00:14:18.850
+Janmejay Mohanty: which awarded awards
+
+105
+00:14:19.160 --> 00:14:20.520
+Janmejay Mohanty: uh
+
+106
+00:14:20.710 --> 00:14:27.400
+Janmejay Mohanty: the expected value as P. One playing a best response against new tools
+
+107
+00:14:27.410 --> 00:14:43.209
+Janmejay Mohanty: from strategy. But we one all the way also cannot do better than always taking a a dash team because you two could simply play according to the trunk strategy in S, which means the action a dash
+
+108
+00:14:43.510 --> 00:14:52.379
+Janmejay Mohanty: as would give the same expected value to P. One as X and A. Ds. T. If we one played optimally in S.
+
+109
+00:14:52.700 --> 00:15:01.720
+Janmejay Mohanty: In this way the strategy for P. Two and S is pressure to be no worse than that of drunk
+
+110
+00:15:01.940 --> 00:15:20.179
+Janmejay Mohanty: strategy in an example, game coin to us. If player too well to always choose heads, as was the cause in unsafe subgame to solving, then t one would always choosing a Sd. With hands and a desk as retails.
+
+111
+00:15:23.490 --> 00:15:36.259
+Janmejay Mohanty: Oh, what is Max? Nor in solving it's not in solving measure, is similar to resolving, Accept It seeks to improve place to strategy in the sub game strategy as much as possible while
+
+112
+00:15:36.270 --> 00:15:50.449
+Janmejay Mohanty: resolving six for a strategy for player, two in S. That will simply prevent me one player, one from entering as Max Margin margin, solving additionally six to punish
+
+113
+00:15:50.460 --> 00:16:17.680
+Janmejay Mohanty: labor, one as much as possible. If player, one nevertheless chooses to enter as a sub game margin is defined for each info set in S uh r, which represent the difference in value between entering the sub game versus choosing the alternative payoff. The same game margin is M. Rose to S. I comma as equal to v
+
+114
+00:16:17.960 --> 00:16:33.030
+Janmejay Mohanty: power a row for power as we are. I comma a star, a S. P. Minus V. For row os bracket. I comma a D. S.
+
+115
+00:16:37.190 --> 00:16:38.430
+Janmejay Mohanty: Well,
+
+116
+00:16:38.480 --> 00:16:42.860
+Janmejay Mohanty: here we discuss about solving multiple
+
+117
+00:16:43.100 --> 00:16:45.200
+Janmejay Mohanty: sub games independent.
+
+118
+00:16:46.060 --> 00:16:51.910
+Janmejay Mohanty: So In this figure we see that C is the left left part the game
+
+119
+00:16:52.100 --> 00:16:56.000
+Janmejay Mohanty: with two sub games, the North Sea one, and
+
+120
+00:16:56.120 --> 00:17:09.850
+Janmejay Mohanty: see to our public uh chances chance notes, whose outcomes are seen by both player one and player to write an augmented sub game for one of the sub-game. If
+
+121
+00:17:10.300 --> 00:17:18.050
+Janmejay Mohanty: only one of the sub-games is being solved, then the alternative payoffs for heads can be at
+
+122
+00:17:18.089 --> 00:17:21.349
+Janmejay Mohanty: most one are in both
+
+123
+00:17:21.400 --> 00:17:24.579
+Janmejay Mohanty: uh solved independently, then the
+
+124
+00:17:30.690 --> 00:17:32.300
+Janmejay Mohanty: some to
+
+125
+00:17:32.600 --> 00:17:38.640
+Janmejay Mohanty: at most one. For example, the alternative payoff in both sub names can be
+
+126
+00:17:38.900 --> 00:17:40.260
+Janmejay Mohanty: point five.
+
+127
+00:17:42.410 --> 00:17:49.569
+Janmejay Mohanty: Yeah. To address this issue. We make two changes. First, we ensure that we do not double count gifts
+
+128
+00:17:49.580 --> 00:18:03.949
+Janmejay Mohanty: That play player one gives us by using an entire gift in multiple sub-game. For example, consider the game shown in figure five, which contains two sub games s one and s two. The sale action leads to an
+
+129
+00:18:04.020 --> 00:18:12.549
+Janmejay Mohanty: expected value of point. Five and heads. State, while play leads to an expected value of point of zero
+
+130
+00:18:12.610 --> 00:18:23.339
+Janmejay Mohanty: when solving. Just for we think that some sub came from heads because, due to the chance node, it would in only increase there once
+
+131
+00:18:23.350 --> 00:18:36.590
+Janmejay Mohanty: value for choosing play by zero point five. But if the same reasoning is applied to those sub games independently, then both sub games would always choose tails and player ones uh
+
+132
+00:18:36.600 --> 00:18:47.410
+Janmejay Mohanty: value for choosing play, or from, as would become fun, while the value for sale would would only be zero point five.
+
+133
+00:18:50.130 --> 00:19:07.439
+Janmejay Mohanty: Now we will discuss about modeling error in sub games. So when solving multiple player two sub games, there is a minimal, minimally exploitable strategy row power to that could in
+
+134
+00:19:07.630 --> 00:19:26.110
+Janmejay Mohanty: uh being computed by changing only the strategies in the Sub Games Road Road to may not be a Nash equilibrium, because place to strategy outside the sub games is face, but it is closes that can be achieved by
+
+135
+00:19:27.830 --> 00:19:31.019
+Janmejay Mohanty: strategy only in the sub games.
+
+136
+00:19:31.280 --> 00:19:47.090
+Janmejay Mohanty: How a road road to can only be guaranteed to be produced by solving all sub games together because the optimal strategy in one sub game depends on the optimal strategy and other subgames
+
+137
+00:19:48.280 --> 00:19:51.560
+Janmejay Mohanty: yeah distributional alternative payoffs.
+
+138
+00:19:51.670 --> 00:20:00.180
+Janmejay Mohanty: We can see in this figure the visualization of the change in augmented sub-game from figure four. When
+
+139
+00:20:00.340 --> 00:20:02.340
+Janmejay Mohanty: uh using
+
+140
+00:20:02.510 --> 00:20:05.729
+Janmejay Mohanty: distributional alternative payoffs
+
+141
+00:20:06.010 --> 00:20:07.080
+Janmejay Mohanty: so
+
+142
+00:20:07.370 --> 00:20:10.749
+Janmejay Mohanty: we can discuss it in more details like
+
+143
+00:20:11.600 --> 00:20:13.459
+Janmejay Mohanty: Well, yeah.
+
+144
+00:20:13.490 --> 00:20:29.970
+Janmejay Mohanty: So this modification makes the augmented sub game infinite in size, because the random variables may be real valued and player, one could have a units strategy for each outcome of random variable. Fortunately, the special
+
+145
+00:20:30.470 --> 00:20:43.699
+Janmejay Mohanty: uh structure of the game allows us to arrive at E. To Nash Equilibrium Strategy for this in finite size augmented subcommittee by solving a much simpler gadget game.
+
+146
+00:20:45.830 --> 00:20:57.050
+Janmejay Mohanty: Here are some experiments. The result we get by performing all those uh methods and techniques which we you know we have been talking about earlier
+
+147
+00:20:57.370 --> 00:21:07.930
+Janmejay Mohanty: uh this table, so the exploit will be evaluated in the game with no information, abstraction, or sub games, solving in small flop. Texas hold them
+
+148
+00:21:08.910 --> 00:21:10.010
+Janmejay Mohanty: uh
+
+149
+00:21:10.030 --> 00:21:13.690
+Janmejay Mohanty: this table to X shows that that
+
+150
+00:21:13.800 --> 00:21:22.819
+Janmejay Mohanty: exploitability evaluated in this game with no information abstraction of sub-game solving in large block Texas hold them.
+
+151
+00:21:23.120 --> 00:21:26.049
+Janmejay Mohanty: Yeah. This table three results
+
+152
+00:21:26.100 --> 00:21:35.980
+Janmejay Mohanty: is showing that exploitability evaluated in the game with no information. Abstraction of sub game solving intern Texas for them.
+
+153
+00:21:36.340 --> 00:21:37.360
+Janmejay Mohanty: Yeah.
+
+154
+00:21:37.670 --> 00:21:40.569
+Janmejay Mohanty: This table for results showing
+
+155
+00:21:41.270 --> 00:21:58.600
+Janmejay Mohanty: comparison of various sub game solving techniques in nested sub game, solving the performance of the pseudo harmonic action. Translation is also on shown. Exploritivity is evaluated in the large action, abstraction, and there is no information at section in this experiment.
+
+156
+00:22:00.260 --> 00:22:09.009
+Janmejay Mohanty: Here is the Lastly, we want to show you the evaluation against top humans. This this graph shows that
+
+157
+00:22:09.240 --> 00:22:22.860
+Janmejay Mohanty: uh liberators we talked about that El Gay, uh engine game has a performance over the course of the two thousand and seventeen brain versus Ai competition.
+
+158
+00:22:28.120 --> 00:22:30.759
+Janmejay Mohanty: So we can finally conclude,
+
+159
+00:22:30.930 --> 00:22:37.849
+Janmejay Mohanty: as we introduce this. How small it is! Uh introduce a
+
+160
+00:22:37.870 --> 00:22:43.489
+Janmejay Mohanty: Oh, here is a mistake. Sorry for that. The introduce a sub game
+
+161
+00:22:44.540 --> 00:23:04.430
+Janmejay Mohanty: solving method for imperfect information games which has stronger theoretical guarantees and better practical performance than prior sub game. At solving matters we show, we we show results on exploitability for both safe and unsafe subgame solving matters.
+
+162
+00:23:05.190 --> 00:23:23.379
+Janmejay Mohanty: We also discussed and used a method for some for nested subgame, solving in response to the opponents of three actions, and demonstrated that it leads to a dramatically better performance than usual approach of actions.
+
+163
+00:23:23.980 --> 00:23:32.539
+Janmejay Mohanty: Finally, we showed the effectiveness of this method in practical against top human professionals in the
+
+164
+00:23:32.560 --> 00:23:43.469
+Janmejay Mohanty: game of heads up no limit. Texas hold them for for the main benchmark challenge for Ai in imperfect information games,
+
+165
+00:23:43.940 --> 00:23:56.970
+Janmejay Mohanty: and lastly, in two thousand and seventeen prints versus Ai competition. Our Ai liberators become the first Ai to reach the milestone of defeating talk Humans
+
+166
+00:23:57.440 --> 00:24:01.410
+Janmejay Mohanty: in heads up no limit. Texas holding.
+
+167
+00:24:02.650 --> 00:24:09.440
+Janmejay Mohanty: Thank you for listening to listening and seeing my presentation. I hope you like it.
+
+168
+00:24:09.870 --> 00:24:10.960
+Janmejay Mohanty: Thank you,
+
